@@ -1,0 +1,384 @@
+/* Reset & Base */
+body, html, #root, .App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  display: block;
+  margin-top: 20px;
+}
+
+/* Navbar (Top) */
+.navbar, .mobile-header {
+  background-color: #283593;
+  color: white;
+  padding: 1rem 2rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+/* Desktop navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Mobile header */
+.mobile-header {
+  display: none;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.mobile-header .menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.mobile-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* App layout under navbar */
+.app-body {
+  display: flex;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #fafafa;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  overflow-y: auto;
+  height: 100%;
+  transition: transform 0.3s ease;
+  z-index: 1002;
+}
+
+.sidebar-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Sidebar navigation */
+.grade-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.grade-item {
+  margin-bottom: 1rem;
+}
+
+.grade-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a237e;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.grade-toggle:hover {
+  background-color: #e8eaf6;
+}
+
+.chevron-icon {
+  font-size: 0.8rem;
+}
+
+.subject-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.subject-list.open {
+  max-height: 500px; /* Enough space for expanded content */
+}
+
+.subject-list li {
+  margin: 0.3rem 0;
+}
+
+.subject-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.subject-list a:hover {
+  background-color: #e0e0e0;
+}
+
+.subject-list a.active {
+  background-color: #c5cae9;
+  color: #1a237e;
+}
+
+/* Main content area */
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+/* Simulation container */
+.simulation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simulation-instructions {
+  margin-top: 1.5rem;
+  max-width: 700px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.simulation-instructions h2 {
+  margin-bottom: 0.5rem;
+  color: #1a237e;
+}
+
+/* Mobile overlay for sidebar */
+.sidebar-overlay {
+  display: none;
+}
+
+/* ------------------------------
+   Responsive (Mobile < 768px)
+------------------------------ */
+@media (max-width: 768px) {
+  .app-body {
+    flex-direction: column;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+    background-color: white;
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-header {
+    display: flex;
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .app-content {
+    padding-top: 80px;
+  }
+}
+
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #1a237e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+.dash{
+  color: white;
+}
+
+.btn-link:hover {
+  background-color: #3949ab;
+}
+
+
+.physics-dashboard {
+  padding: 2rem;
+}
+
+.physics-dashboard h1 {
+  margin-bottom: 2rem;
+  color: #1a237e;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* Grid layout */
+.simulation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Card-style buttons */
+.btn-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: #e8eaf6;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1a237e;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-card:hover {
+  background-color: #c5cae9;
+  transform: translateY(-4px);
+}
+
+
+.custom-work-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.custom-work-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+.dashboard-container {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.grades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.grade-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.lab-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.lab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  background: #0077cc;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.lab-btn:hover {
+  background: #005fa3;
+}
+
+.progress-bar {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

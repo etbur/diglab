@@ -1,0 +1,245 @@
+.static-electricity-lab {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: #fff;
+  padding: 20px;
+}
+
+.lab-header {
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lab-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffdd40;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.lab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #f8f8f8;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  background: rgba(74, 87, 195, 0.5);
+}
+
+.nav-link:hover, .nav-link.active {
+  background: #4a57c3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.simulation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.simulation-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.canvas-container {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simulation-canvas {
+  width: 100%;
+  height: 300px;
+  background: #0c1445;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #4a57c3;
+}
+
+.charge-indicator {
+  width: 100%;
+  background: rgba(30, 35, 67, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.charge-label {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #ffdd40;
+}
+
+.charge-meter {
+  width: 100%;
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.charge-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.charge-value {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.controls-panel {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.controls-panel h2 {
+  font-size: 1.8rem;
+  color: #ffdd40;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.control-group {
+  margin-bottom: 25px;
+}
+
+.control-group h3 {
+  font-size: 1.2rem;
+  color: #ffdd40;
+  margin-bottom: 12px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  background: #4a57c3;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn:hover {
+  background: #6774e6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn.active {
+  background: #ffdd40;
+  color: #333;
+}
+
+.btn.rubbing {
+  background: #ff9500;
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.explanation-panel {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.explanation-panel h2 {
+  font-size: 1.8rem;
+  color: #ffdd40;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.explanation-panel p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.principle {
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(30, 35, 67, 0.5);
+  border-radius: 10px;
+}
+
+.principle h3 {
+  color: #ffdd40;
+  margin-bottom: 10px;
+}
+
+.principle ul {
+  padding-left: 20px;
+}
+
+.principle li {
+  margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .simulation-content {
+    flex-direction: column;
+  }
+  
+  .lab-header h1 {
+    font-size: 2rem;
+  }
+  
+  .lab-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link {
+    width: 80%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,211 @@
+.photosynthesis-lab {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f9f5;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #4CAF50;
+}
+
+header h1 {
+  color: #2E7D32;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #689F38;
+  font-style: italic;
+}
+
+.lab-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.control-panel {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2E7D32;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #C8E6C9;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+}
+
+.start-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.stop-button {
+  background: #F44336;
+  color: white;
+}
+
+.reset-button {
+  background: #607D8B;
+  color: white;
+}
+
+.visualization-area {
+  flex: 2;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.plant-container {
+  background: #E8F5E9;
+  border-radius: 10px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.plant-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.light-source {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  pointer-events: none;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.metric {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.metric h3 {
+  margin: 0 0 5px 0;
+  color: #2E7D32;
+  font-size: 14px;
+}
+
+.metric p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1B5E20;
+}
+
+.analysis-panel {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.ai-insights {
+  background: #E8F5E9;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 150px;
+  margin-bottom: 20px;
+}
+
+.ai-insights p {
+  margin: 0 0 10px 0;
+}
+
+.limiting-factor {
+  background: #FFF8E1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.factor-display {
+  font-weight: bold;
+  color: #FF8F00;
+  text-align: center;
+  padding: 10px;
+}
+
+.reaction-equation {
+  background: #E3F2FD;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.reaction-equation p {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px 0 0 0;
+}
+
+.educational-tips {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.educational-tips ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .lab-container {
+    flex-direction: column;
+  }
+}
