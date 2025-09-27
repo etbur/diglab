@@ -38,6 +38,11 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "rollup-plugin-visualizer": "^6.0.3",
-    "vite": "^7.0.4"
+    "vite": "5.4"
+  },
+  "resolve": {
+    "alias": {
+      "crypto": "crypto-browserify"
+    }
   }
 }
