@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -20,7 +20,7 @@ export default defineConfig({
             if (id.includes('mathjs')) return 'vendor-mathjs'
             if (id.includes('react-router')) return 'vendor-react-router'
             if (id.includes('react')) return 'vendor-react'
-=======
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { visualizer } from "rollup-plugin-visualizer";
@@ -48,16 +48,16 @@ export default defineConfig({
             if (id.includes("mathjs")) return "mathjs";
             if (id.includes("p5")) return "p5";
             return "vendor"; // all other smaller libs
->>>>>>> bd54ca401b791b86eb68a35b53f93e6042358bf1
+
           }
         },
       },
     },
-<<<<<<< HEAD
+
   },
 })
-=======
+
     chunkSizeWarningLimit: 2000, // optional: silence warnings up to 2MB
   },
 });
->>>>>>> bd54ca401b791b86eb68a35b53f93e6042358bf1
+
