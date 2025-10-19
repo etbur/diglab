@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -395,7 +395,7 @@ const LabRouter = () => {
         <Route path="/labs/game/physics" element={<PhysicsGameBoard />} />
       </Routes>
     </Suspense>
-=======
+
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "../components/Dashboard"; 
@@ -636,7 +636,7 @@ const LabRouter = () => {
       {/*  */}
 
     </Routes>
->>>>>>> bd54ca401b791b86eb68a35b53f93e6042358bf1
+
   );
 };
 
