@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>laliAx Logo</title>
+<style>
+  .logo {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .church, .obelisk {
+    width: 50px;
+    height: 100px;
+    display: inline-block;
+  }
+  .church {
+    background: sienna;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  .obelisk {
+    background: gold;
+    clip-path: polygon(50% 0%, 45% 100%, 55% 100%);
+  }
+  .text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<div class="logo">
+  <div class="church"></div>
+  <div class="text">laliAx et solution IGHC</div>
+  <div class="obelisk"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,389 @@
+/* AcidsBases.css */
+.acids-bases-lab {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #046a38;
+}
+
+header h1 {
+  color: #046a38;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #666;
+}
+
+.lab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.simulation-area {
+  display: flex;
+  gap: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.ph-meter {
+  flex: 1;
+}
+
+.ph-scale {
+  position: relative;
+  height: 40px;
+  background: linear-gradient(to right, 
+    #ff0000, #ff3300, #ff6600, #ff9900, #ffcc00, 
+    #ffff00, #ccff33, #66ff33, #33cc33, #009933, #006633);
+  border-radius: 20px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.ph-indicator {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 50px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.ph-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.ph-labels span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ph-labels .acid {
+  color: #d32f2f;
+}
+
+.ph-labels .base {
+  color: #1976d2;
+}
+
+.ph-labels .neutral {
+  color: #2e7d32;
+  font-weight: bolder;
+}
+
+.ph-value-display {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.ph-status {
+  padding: 3px 10px;
+  border-radius: 15px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.ph-status.acid {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.ph-status.base {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.ph-status.neutral {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.beaker-visualization {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.beaker {
+  width: 150px;
+  height: 200px;
+  border: 3px solid #333;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s;
+}
+
+.substance-info {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: bubble-rise linear infinite;
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-180px);
+    opacity: 0;
+  }
+}
+
+.control-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.substance-selector h3, .indicator-selector h3, .experiment-controls h3 {
+  margin-top: 0;
+  color: #046a38;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.substance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.substance-grid button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.substance-grid button:hover {
+  transform: translateY(-3px);
+}
+
+.substance-grid button.active {
+  border: 2px solid #333;
+  font-weight: bold;
+}
+
+.substance-grid button span {
+  font-size: 10px;
+  margin-top: 5px;
+  background: rgba(0,0,0,0.3);
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.indicator-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.indicator-buttons button {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+.indicator-buttons button.active {
+  background: #046a38;
+  color: white;
+  border-color: #046a38;
+}
+
+.slider-control {
+  margin: 15px 0;
+}
+
+.slider-control label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.slider-control input {
+  width: 100%;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.action-buttons button:first-child {
+  background: #046a38;
+  color: white;
+}
+
+.action-buttons button:first-child.titrating {
+  background: #ff9800;
+}
+
+.action-buttons button:last-child {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+.data-panel {
+  display: flex;
+  gap: 20px;
+}
+
+.chemical-properties, .reaction-log {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.chemical-properties table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.chemical-properties td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.chemical-properties td:first-child {
+  font-weight: bold;
+  width: 60%;
+}
+
+.reaction-log .log-entries {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.log-entry .time {
+  color: #666;
+}
+
+.log-entry .ph {
+  font-weight: bold;
+  color: #046a38;
+}
+
+.success-message {
+  margin-top: 15px;
+  padding: 10px;
+  background: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+  color: #2e7d32;
+}
+
+.learning-resources {
+  margin-top: 30px;
+}
+
+.learning-resources h3 {
+  color: #046a38;
+  border-bottom: 1px solid #046a38;
+  padding-bottom: 10px;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.resource-card {
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.resource-card h4 {
+  color: #046a38;
+  margin-top: 0;
+}
+
+.resource-card p {
+  color: #666;
+  margin-bottom: 0;
+}

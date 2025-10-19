@@ -1,0 +1,191 @@
+.leaf-lab {
+  font-family: 'Arial', sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f9f5;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #4CAF50;
+}
+
+header h1 {
+  color: #2E7D32;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #689F38;
+  font-style: italic;
+}
+
+.lab-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 20px;
+}
+
+.microscope-controls, .specimen-controls {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2E7D32;
+}
+
+select, input[type="range"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #C8E6C9;
+  border-radius: 4px;
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+.leaf-features ul {
+  padding-left: 20px;
+  list-style-type: square;
+}
+
+.leaf-features li {
+  margin-bottom: 5px;
+}
+
+.microscope-view {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.microscope-image {
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.microscope-image canvas {
+  max-width: 100%;
+  max-height: 400px;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.measurements {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.measurements table {
+  width: 100%;
+}
+
+.measurements td {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.measurements td:first-child {
+  font-weight: bold;
+  color: #2E7D32;
+}
+
+.analysis-panel {
+  grid-column: span 3;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.ai-insights, .diagnosis {
+  background: #E8F5E9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.ai-insights pre, .diagnosis pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  margin: 0;
+}
+
+.diagnosis {
+  background: #FFEBEE;
+  border-left: 4px solid #F44336;
+}
+
+.educational-content {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.structure-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.structure-card h4 {
+  color: #2E7D32;
+  margin-top: 0;
+  border-bottom: 1px solid #C8E6C9;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 1200px) {
+  .lab-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .analysis-panel, .educational-content {
+    grid-column: span 2;
+  }
+  
+  .educational-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .lab-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .analysis-panel, .educational-content {
+    grid-column: span 1;
+  }
+  
+  .educational-content {
+    grid-template-columns: 1fr;
+  }
+}
