@@ -12,10 +12,9 @@ const Sidebar = () => {
     "Grade 11": ["Physics", "Chemistry", "Biology", "ICT", 'Maths', "Drawing"],
     "Grade 12": ["Physics", "Chemistry", "Biology", "ICT", 'Maths',"Drawing"],
     "Collage": ["Physics", "Chemistry", "Biology", "ICT", 'Maths',"Drawing"],
-<<<<<<< HEAD
+
     "Game": ["Maths", "Physics", "Climate", "MapNegotiotion", 'Puzzle',"contest", "English", "Refrash"],
-=======
->>>>>>> bd54ca401b791b86eb68a35b53f93e6042358bf1
+
   };
 
   const toggleGrade = (grade) => {
