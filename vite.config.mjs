@@ -28,9 +28,13 @@ export default defineConfig({
   },
   define: {
     global: 'globalThis',
+    'process.env.NODE_ENV': JSON.stringify('production'),
   },
   base: './',
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
   },
 });
